@@ -6,7 +6,7 @@ Your application should accept a single command-line argument containing the pat
 
 Example:
 ```
-$ ./corpus romeo_and_juliet.txt 7oldsamr.txt
+$ ./corpus 7oldsamr.txt
 ```
 
 # Output
