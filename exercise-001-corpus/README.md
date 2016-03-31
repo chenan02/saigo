@@ -30,4 +30,28 @@ Example:
 6 raiko
 ...
 ```
-In case of ties, any ordering is fine.
+In case of ties, any ordering is fine as long as it is deterministic (so that you can write proper tests!)
+
+# Implementation
+The purpose of this exercise is to teach usage of basic Go elements and packages like `map, sort, strings`. So please refrain from installing custom packages. Your imports should look something like this:
+
+```
+import (
+  "fmt"
+  "sort"
+  "strings"
+)
+```
+and not like this:
+```
+import (
+  "github.com/hotshot/nlp"
+  "github.com/topcoder1/histogram"
+)
+```
+
+# Testing
+Please include a test of your software that runs with `go test ./...`
+
+# Benchmarking (Optional)
+Try to use the Go [benchmarking](http://dave.cheney.net/2013/06/30/how-to-write-benchmarks-in-go) tools that run with `go test -bench=.` 
