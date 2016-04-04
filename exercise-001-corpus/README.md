@@ -30,7 +30,8 @@ Example:
 6 raiko
 ...
 ```
-In case of ties, any ordering is fine as long as it is deterministic (so that you can write proper tests!)
+
+In case of ties, any ordering is fine as long as it is deterministic (so that you can write proper tests!) To simplify things you may consider uppercase letters indistinguishable from lowercase letters.
 
 # Implementation
 The purpose of this exercise is to teach usage of basic Go elements and packages like `map, sort, strings`. So please refrain from installing custom packages. Your imports should look something like this:
