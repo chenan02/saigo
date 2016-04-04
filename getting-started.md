@@ -68,9 +68,13 @@
   Hello, world.
   ```
 
+# Exercises
+
+The exercises in this repo assume that the learner has traversed a basic [tutorial](http://www.tutorialspoint.com/go/index.htm) on Go. If you find the first exercise overwhelming, you should probably work through a tutorial and return.
+
 # Recommended Resources
 
-There's no need to read through all of these resources, but keep them handy when you need a reminder.
+There's no need to read through all of these resources but keep them handy when you need a reminder.
 
   1. [How to Write Go Code](https://golang.org/doc/code.html): This document demonstrates the development of a simple Go package and introduces the go tool, the standard way to fetch, build, and install Go packages and commands.
   2. [Effective Go](https://golang.org/doc/effective_go.html) : All the basic data types, control structures, style guide explained through examples.
