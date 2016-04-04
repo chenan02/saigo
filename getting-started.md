@@ -70,7 +70,7 @@
 
 # Exercises
 
-The exercises in this repo assume that the learner has traversed a basic [tutorial](http://www.tutorialspoint.com/go/index.htm) on Go. If you find the first exercise overwhelming, you should probably work through a tutorial and return.
+The exercises in this repo assume that the learner has traversed a basic [tutorial](http://www.tutorialspoint.com/go/index.htm) on Go. If you find the first exercise overwhelming, you should probably try working through a tutorial and returning.
 
 # Recommended Resources
 
