@@ -2,11 +2,11 @@
 Write a console application that counts the frequencies of words that appear in a text document.
 
 # Input
-Your application should accept a single command-line argument containing the path of the text file.
+Your application (say it's called `word_count`) should accept a single command-line argument containing the path of the text file.
 
 Example:
 ```
-$ ./corpus 7oldsamr.txt
+$ word_count 7oldsamr.txt
 ```
 
 # Output
