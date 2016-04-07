@@ -5,22 +5,22 @@
 First, let's reorganize the code from the previous exercise into this file structure:
 
 ```bash
-├── corpus.go
 └── src
-    └── corpus
+    ├── cmd
+    │   └── word_count
+    │       └── word_count.go
+    └── words
         ├── corpus.go
         └── corpus_test.go
 ```
 
-This structure allows us to keep the main file at the root of the directory while placing all of our source code and tests in a package in the `src` directory. If you have extra source/test files, feel free to add them under the src/corpus directory.
-
-Make sure corpus.go at the root uses `package main` while the two files under src/corpus have `package corpus`.
+Make sure `word_count.go` uses `package main` because executable commands must always use `package main`. All files under `src/words` will use `package words`.
 
 Make sure you can still run your code and tests still pass:
 ```bash
-$ go build corpus.go
-$ ./corpus path/to/text
-$ go test ./src/corpus
+$ go install ./src/...
+$ word_count path/to/text
+$ go test ./src/words
 ```
 
 By installing Go, you now have a basic set of tools that will help you maintain your code format and style. These tools are simple in design, but powerful in function. Here are several that will be invaluable during your time with Go.
@@ -88,7 +88,7 @@ Code coverage reports provide a quick and easy way of finding untested code. Go�
 
 Set the -coverprofile option while running `go test` and it will generate a coverage profile:
 ```bash
-go test ./src/corpus -coverprofile=coverage.out
+go test ./src/words -coverprofile=coverage.out
 ```
 
 You can then pass the profile to `go tool cover` and generate different kinds of reports. If you want per-function coverage, you can use the `-func` flag.
