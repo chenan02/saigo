@@ -1,4 +1,4 @@
-# Description
+## Description
 Write a console application that counts the frequencies of words that appear in a text document.
 
 ## Input
