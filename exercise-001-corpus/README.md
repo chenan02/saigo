@@ -51,8 +51,8 @@ import (
 )
 ```
 
-# Testing
+## Testing
 Please include a test of your software that runs with `go test ./...`
 
-# Benchmarking (Optional)
+## Benchmarking (Optional)
 Try to use the Go [benchmarking](http://dave.cheney.net/2013/06/30/how-to-write-benchmarks-in-go) tools that run with `go test -bench=.` 
