@@ -5,7 +5,7 @@ A series of (hopefully cool!) exercises for those eager to learn Go
 ## Setting Up Your Go Environment
 
 As new versions of the Go suite are released you will want an
-easy way to stay up to date. So please follow the [Getting Started](setup-environment.md)
+easy way to stay up to date. So please follow the [Setup](setup-environment.md)
 guide to install Go and build your workspace.
 
 It is best to get this right the first time around so if you have
