@@ -41,8 +41,8 @@ Within this exercise there are four directories:
 1. `exhibit-d`: Parsing Forms
 
 Each directory contains code for a self-contained web-server.
-Read through the code in each of these directories (in order)
-and explain what each line does.
+Run each server from the command-line and use a browser to see them work.
+Read through the implementation for each of these servers (in order) and explain what each line of code does.
 
 ## Engineering Task
 
