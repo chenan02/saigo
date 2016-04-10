@@ -38,7 +38,7 @@ Within this exercise there are four directories:
 1. `exhibit-a`: Basic Server
 1. `exhibit-b`: HTML Template
 1. `exhibit-c`: HTML Template With A View
-1. `exhibit-d`: Parsing A Form
+1. `exhibit-d`: Parsing Forms
 
 Each directory contains code for a self-contained web-server.
 Read through the code in each of these directories (in order)
