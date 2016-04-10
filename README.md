@@ -33,7 +33,7 @@ an instructor.
 ### Engineering Tasks
 
 Engineering tasks will ask you to write some code, usually an application of some sort.
-Be ready to demo your application when it it completed. Instructors want to see it in action!
+Be ready to demo your application when it is completed. Instructors want to see it in action!
 
 
 ## Recommended Resources
