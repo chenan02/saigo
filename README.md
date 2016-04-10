@@ -1,4 +1,4 @@
-# learning
+# [Saigo](http://japanese.about.com/library/media/audio/saigo.mp3)
 A series of (hopefully cool!) exercises for those eager to learn Go
 
 
