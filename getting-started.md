@@ -70,7 +70,26 @@
 
 # Exercises
 
-The exercises in this repo assume that the learner has traversed a basic [tutorial](http://www.tutorialspoint.com/go/index.htm) on Go. If you find the first exercise overwhelming, you should probably try working through a tutorial and returning.
+Most of the exercises assume that you have already traversed a basic tutorial on Go.
+If you find the first exercise overwhelming, you should probably try working through a tutorial and returning.
+
+If this is your first look at Go, then a great place to start is [An Introduction to Programming in Go](https://www.golang-book.com/books/intro).
+
+## Instructors
+
+Hopefully you will have instructors available to work with while learning. Never be
+afraid to ask instructors for help or clarification. There is no such thing as a _stupid_ question.
+
+## Comprehension Tasks (Important!)
+
+Some of the exercises include _Comprehension Tasks_ that require you to read and explain
+portions of Go code. To properly execute a comprehension-task you should deliver your explanation to
+an instructor.
+
+## Engineering Tasks
+
+Engineering tasks will ask you to write some code, usually an application of some sort.
+Be ready to demo your application when it it completed. Instructors want to see it in action!
 
 # Recommended Resources
 
