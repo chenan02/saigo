@@ -48,11 +48,11 @@ Read through the implementation for each of these servers (in order) and explain
 
 Build a web-application that allows a user to enter their name.
 The server should display (on the same page) a table of all users
-that have entered their name along with the frequency.
+that have entered their name along with the frequency of submissions.
 
 This task does not require data to be persisted after shutdown. So
-if your server is shut down and brought back up, the table should
-be empty.
+if your server is shut down and brought back up, it is okay if the
+table is empty.
 
 ## Bonus (Optional)
 
