@@ -39,6 +39,7 @@ Within this exercise there are four directories:
 1. `exhibit-b`: HTML Template
 1. `exhibit-c`: HTML Template With A View
 1. `exhibit-d`: Parsing Forms
+1. `exhibit-e`: Testing
 
 Each directory contains code for a self-contained web-server.
 Run each server from the command-line and use a browser to see them work.
