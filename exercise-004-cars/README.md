@@ -13,6 +13,9 @@ Also fire up a browser and try hitting the different routes. See what happens
 when you hit `peek` before `poke`.
 
 ```
+exhibit-a/server.go
+-------------------
+
 package main
 
 import (
