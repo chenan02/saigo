@@ -1,5 +1,5 @@
 ## Description
-You are paired up with a UI engineer to build out a racing-simulation web app.
+You have been paired up with a UI engineer to build out a racing-simulation web app.
 The UI is done, but the back-end is non-existent. Your job is to build it!
 
 This exercise will teach you how to manage cookies and sessions.
@@ -57,11 +57,15 @@ func main() {
 ## Engineering Task
 
 In the `templates` directory you will find two views `join.html` and `play.html`.
-The `join` view asks the user to enter a _username_. The user will then be directed
-to `play` where they can add vehicles to their simulation.
+The `join` view asks the user to enter a _username_. Your application should store
+this value in a cookie named `username` in the user's browser. The user should then
+be directed to `play` where they can add vehicles to their simulation.
+
+On the simulation page (i.e. `play.html`) the user can add different types of vehicles
+to their racing simulation. 
 
 One of the challenges here is that your application will have to keep track of
-the users list of vehicles. Each time the user clicks `add`, the application must
+the user's list of vehicles. Each time the user clicks `add`, the application must
 add the vehicle to the list and then present that same list back to the view.
 
 The template `play.html` assumes that the following data parameter `View` is presented:
