@@ -33,7 +33,7 @@ exercise-003-web$ go run exhibit-a/server.go
 Fire up a web-browser and enter the URL `localhost:8080`.
 
 ## Comprehension Tasks
-Within this exercise there are four directories:
+Within this exercise there are five directories:
 
 1. `exhibit-a`: Basic Server
 1. `exhibit-b`: HTML Template
