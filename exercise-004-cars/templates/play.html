@@ -1,0 +1,27 @@
+<html>
+  <body>
+	<h3>Add some vehicles {{ .Username }}</h3>
+	<form action="add" method="POST">
+	  <select name="vehicle">
+		<option value="jeep">Jeep</option>
+		<option value="bike">Bike</option>
+		<option value="boat">Boat</option>
+	  </select>
+	  <select name="speed">
+		<option value="slow">Slow But Reliable</option>
+		<option value="fast">Fast And Furious</option>
+		<option value="rage">Road Rage</option>
+	  </select>
+	  <input type="submit" value="Add Vehicle">
+	</form>
+	<table>
+	{{ range .Vehicles.List }}
+	<tr>
+	  <td>{{ .Name }}</td>
+	  <td>{{ .Count }}</td>
+	</tr>
+	{{ end }}
+	</table>
+	<div><a href="/exit">Leave</a>
+  </body>
+</html>
