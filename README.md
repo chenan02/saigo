@@ -14,15 +14,20 @@ trouble please ask for help!
 
 ## Exercises
 
-Most of the exercises assume that you have already traversed a basic tutorial on Go.
-If you find the first exercise overwhelming, you should probably try working through a tutorial and returning.
+The Saigo exercises are intended to be a tool for the instructor. Experienced developers may choose
+to use them as a way to jump right in the pool. However, to get the most out of them it is recommended that
+learners find an instructor.
 
-If this is your first look at Go, then a great place to start is [An Introduction to Programming in Go](https://www.golang-book.com/books/intro).
+The first exercise (000-prep)[https://git.enova.com/nyukin/saigo/tree/master/exercise-000-prep] asks learners to look over Caleb
+Doxsey's [An Introduction to Programming in Go](https://www.golang-book.com/books/intro). Learners should schedule regular
+meetings with an instructor during the course of this book to ask questions, seek clarifications, and talk about Go!
 
-### Instructors
+### Working With Instructors
 
 Hopefully you will have instructors available to work with while learning. Never be
 afraid to ask instructors for help or clarification. There is no such thing as a _stupid_ question.
+Before starting work on a new exercise, try to schedule a brief meeting with an instructor to go over the requirements.
+No task is truly complete until the learner has discussed their solution(s) with an instructor.
 
 ### Comprehension Tasks (Important!)
 
@@ -33,8 +38,11 @@ an instructor.
 ### Engineering Tasks
 
 Engineering tasks will ask you to write some code, usually an application of some sort.
-Be ready to demo your application when it is completed. Instructors want to see it in action!
+As mentioned above, learners should routinely schedule brief (ten-minute) meetings with instructors
+while working on engineering-tasks. You will want to avoid writing 150 lines of code after only to
+find your solution has issues. Even learning can be agile.
 
+Be ready to demo your application when it is completed. Instructors want to see it in action!
 
 ## Recommended Resources
 
