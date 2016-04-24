@@ -1,6 +1,6 @@
 ## Prepare!
 
-As mentioned in the [introduction](), learners should browse Caleb Doxsey's [An Introduction to Programming in Go](https://www.golang-book.com/books/intro)
+As mentioned in the [introduction](https://git.enova.com/nyukin/saigo), learners should browse Caleb Doxsey's [An Introduction to Programming in Go](https://www.golang-book.com/books/intro)
 before beginning the exercises. More specifically you should have some exposure to the first nine chapters (they're not long)
 
 ## Recommended Practice
