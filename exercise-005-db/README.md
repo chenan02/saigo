@@ -6,7 +6,15 @@ This exercise assumes the learner is familiar with basic SQL. If you are new to 
 learn the basics before proceeding. Saigo uses [PostgreSQL](http://www.tutorialspoint.com/postgresql/) for all database work.
 
 Set up a local PostgreSQL server on your deveopment machine and create a database called `test`. Connect to the database
-(`$ psql test`) and copy the code in `migration_up.sql` to create the `people` table in your `test` database.
+(`$ psql test`) and copy the code in `migration_up.sql` to create the `people` table in your `test` database:
+
+```
+CREATE TABLE people (
+    person_id SERIAL PRIMARY KEY,
+    name TEXT,
+    ssn INTEGER
+);
+```
 
 ## Comprehension Tasks
 
