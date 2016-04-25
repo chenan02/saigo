@@ -39,8 +39,8 @@ an instructor.
 
 Engineering tasks will ask you to write some code, usually an application of some sort.
 As mentioned above, learners should routinely schedule brief (ten-minute) meetings with instructors
-while working on engineering-tasks. You will want to avoid writing 150 lines of code after only to
-find your solution has issues. Even learning can be agile.
+while working on engineering-tasks. You will want to avoid situations where you write 150 lines of code
+only to find your solution has issues. Even learning can be agile.
 
 Be ready to demo your application when it is completed. Instructors want to see it in action!
 
