@@ -54,11 +54,13 @@ func main() {
 	PanicOn(err)
 
 	for rows.Next() {
-		p := Person{}
-		err := rows.Scan(&p.ID, &p.Name, &p.SSN)
+		var id int
+		var name string
+		var ssn int
+		err := rows.Scan(&id, &name, &ssn)
 		PanicOn(err)
 
-		fmt.Printf("Person %5d %-15s %9d\n", p.ID, p.Name, p.SSN)
+		fmt.Printf("Person %5d %-15s %9d\n", id, name, ssn)
 	}
 }
 ```
