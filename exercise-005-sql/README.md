@@ -24,39 +24,47 @@ prettier interface.
 
 Check out the code in [exhibit-a]():
 
-```
+```go
 package main
 
 import (
+	"database/sql"
 	"fmt"
 
-	"github.com/jmoiron/sqlx"
-	_ "github.com/lib/pq"	
+	_ "github.com/lib/pq"
 )
 
-type Person struct {
-	ID   int    `db:"person_id"`
-	Name string `db:"name"`
-	SSN  int    `db:"ssn"`
+func PanicOn(err error) {
+	if err != nil {
+		panic(err)
+	}
 }
 
 func main() {
-	db, err := sqlx.Open("postgres", "dbname=test sslmode=disable")
-	if err != nil {
-	   panic(err)
-	}
+	db, err := sql.Open("postgres", "dbname=test sslmode=disable")
+	PanicOn(err)
 
-	db.QueryRow("INSERT INTO people(name, ssn) VALUES($1, $2)", "Bruce Leroy", 111223333)
-	db.QueryRow("INSERT INTO people(name, ssn) VALUES($1, $2)", "Sho 'Nuff", 444556666)
+	_, err = db.Exec("INSERT INTO people(name, ssn) VALUES ($1, $2)", "Bruce Leroy", 111223333)
+	PanicOn(err)
 
-	people := []Person{}
-	db.Select(&people, "SELECT person_id, name, ssn FROM people")
+	_, err = db.Exec("INSERT INTO people(name, ssn) VALUES ($1, $2)", "Sho 'Nuff", 444556666)
+	PanicOn(err)
 
-	for _, p := range people {
-		fmt.Printf("Person %5d %-15s %9d\n", p.ID, p.Name, p.SSN)
+	rows, err := db.Query("SELECT person_id, name, ssn FROM people")
+	PanicOn(err)
+
+	for rows.Next() {
+		var id int
+		var name string
+		var ssn int
+		err := rows.Scan(&id, &name, &ssn)
+		PanicOn(err)
+
+		fmt.Printf("Person %5d %-15s %9d\n", id, name, ssn)
 	}
 }
 ```
+
 Make sure you followed the steps above to create the `people` table in your `test` database. Run this code on the console
 and see it work. If you have issues seek the assistance of an instructor.
 
