@@ -4,7 +4,7 @@ Write a fully functional web server!
 ## Introduction
 Check out this code:
 
-```
+```go
 package main
 
 import (
