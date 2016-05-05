@@ -1,16 +1,21 @@
 package models
 
 import (
+	"time"
+
 	"github.com/jmoiron/sqlx"
 )
 
 // Customer ...
 type Customer struct {
-	ID      int
-	Email   string
-	Address string
-	SSN     int
-	Orders  []*Order
+	ID        int
+	Email     string
+	FirstName string
+	LastName  string
+	BirthDate date
+	Orders    []*Order
+	CreatedAt time.Time
+	Updatedat time.Time
 }
 
 // Refresh ...
@@ -19,7 +24,7 @@ func (c *Customer) Refresh(db *sqlx.DB) error {
 }
 
 // NewCustomer ...
-func NewCustomer(db *sqlx.DB, email string, address string, ssn int) (*Customer, error) {
+func NewCustomer(db *sqlx.DB, email string, first_name string, last_name string, birth_date date) (*Customer, error) {
 	return nil, nil
 }
 
