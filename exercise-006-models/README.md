@@ -6,20 +6,26 @@ Your job is to complete the implementation.
 
 ## Engineering Tasks
 
-The client has included a skeleton under the package name `models` that included structures for `Customer` and `Order`.
+The client has included a skeleton under the package name `models` that included structures for `Customer`,`Product` and `Order`.
 
 ```
 type Customer struct {
-    ID      int
-    Email   string
-    Address string
-    SSN     int
-    Orders  []*Order
+    ID        int
+    Email     string
+    FirstName string
+    LastName  string
+    BirthDate date
+    Orders    []*Order
+}
+
+type Product struct {
+    ID        int
+    Product   string
 }
 
 type Order struct {
     ID         int
-    Product    string
+    ProductID  int
     Quantity   int
     Time       time.Time
     CustomerID int
@@ -31,7 +37,7 @@ Along with these structures the client has added a collection of stubbed functio
 ```
 func (c *Customer) Refresh(db *sqlx.DB) error
 
-func NewCustomer(db *sqlx.DB, email string, address string, ssn int) (*Customer, error)
+func NewCustomer(db *sqlx.DB, email string, first_name string, last_name string, birth_date Date) (*Customer, error)
 func DeleteCustomer(db *sqlx.DB, id int) error
 func UpdateCustomer(db *sqlx.DB, u *Customer) error
 func FindCustomerByEmail(db *sqlx.DB, email string) (*Customer, error)
@@ -53,7 +59,7 @@ You must:
 
 1) Implement each of these functions
 2) Pay attention to errors that might creep up from the database calls.
-2) Write tests for the package in `src/models/models_test.go` 
+2) Write tests for the package in `src/models/models_test.go`
 
 ## Do I have to use `sqlx`?
 No. If you prefer not to use the [sqlx](http://github.com/jmoiron/sqlx) package and would instead prefer to work with
