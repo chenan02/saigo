@@ -44,6 +44,8 @@ func FindCustomerByEmail(db *sqlx.DB, email string) (*Customer, error)
 func FindCustomerByID(db *sqlx.DB, id int) (*Customer, error)
 func AllCustomers(db *sqlx.DB) ([]*Customer, error)
 
+func FindProduct(db *sqlx.DB, product string) (*Product, error)
+
 func NewOrder(db *sqlx.DB, custID int, product string, quantity int) error
 func UpdateOrder(db *sqlx.DB, o *Order) error
 func DeleteOrder(db *sqlx.DB, orderID int) error
@@ -57,9 +59,12 @@ requirements of this exercise. You don't want to waste time implementing the wro
 
 You must:
 
-1) Implement each of these functions
-2) Pay attention to errors that might creep up from the database calls.
-2) Write tests for the package in `src/models/models_test.go`
+1. Implement each of these functions
+1. Pay attention to errors that might creep up from the database calls.
+1. Write tests for the package:
+  - `src/models/customer_test.go`
+  - `src/models/product_test.go`
+  - `src/models/order_test.go`
 
 ## Do I have to use `sqlx`?
 No. If you prefer not to use the [sqlx](http://github.com/jmoiron/sqlx) package and would instead prefer to work with
