@@ -16,7 +16,7 @@ product_id SMALLINT PRIMARY KEY
 , product_name varchar(70)
 );
 
-INSERT INTO products(product_id, name)
+INSERT INTO products(product_id, product_name)
 VALUES (1, 'kayak'), (2, 'canoe'), (3, 'paddle'), (4, 'vest');
 
 CREATE TABLE orders(
