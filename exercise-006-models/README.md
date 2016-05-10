@@ -37,7 +37,7 @@ Along with these structures the client has added a collection of stubbed functio
 ```
 func (c *Customer) Refresh(db *sqlx.DB) error
 
-func NewCustomer(db *sqlx.DB, email string, first_name string, last_name string, birth_date Date) (*Customer, error)
+func NewCustomer(db *sqlx.DB, email, first, last string, born time.Time) (*Customer, error)
 func DeleteCustomer(db *sqlx.DB, id int) error
 func UpdateCustomer(db *sqlx.DB, u *Customer) error
 func FindCustomerByEmail(db *sqlx.DB, email string) (*Customer, error)
