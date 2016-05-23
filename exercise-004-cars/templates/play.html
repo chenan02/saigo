@@ -9,109 +9,15 @@
     <title>Play - goCars</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="all">
-
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="./public/vendor/bootstrap-3.3.6/css/bootstrap-theme.min.css" rel="stylesheet" media="all">
+    <link href="./public/vendor/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="./public/css/screen.css" rel="stylesheet" media="all">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <style type="text/css">
-      body {
-        background-color: #009688;
-      }
-
-      .text-muted {
-        color: #b2dfdb;
-      }
-
-      .btn-primary {
-        background-color: #8bc34a;
-        border-color: #72a239;
-      }
-
-      .btn-primary:hover,
-      .btn-primary:active,
-      .btn-primary:focus,
-      .btn-primary:focus:active,
-      .btn-primary:hover:active {
-        background-color: #709c3d;
-        border-color: #5b8030;
-      }
-
-      .content-wrap {
-        background-color: #ffffff;
-        color: #212121;
-        padding-top: 50px;
-        padding-bottom: 30px;
-      }
-
-      .navbar-default {
-        height: 50px;
-      }
-
-      .navbar-brand {
-        color: #00796b !important;
-      }
-
-      .nav-username {
-        float: right;
-        padding: 15px 0;
-      }
-
-      .nav-username span {
-        font-weight: bold;
-      }
-
-      .nav-disconnect {
-        float: right;
-        padding-top: 8px;
-        margin-left: 20px;
-      }
-
-      h1 {
-        margin-top: 0;
-      }
-
-      .row-align-bottom > div {
-        float: none;
-        display: inline-block;
-        font-size: 14px; /* if using LESS it's quicker to just use @font-size-base */
-      }
-
-      .row-align-bottom > div:last-child {
-        vertical-align: bottom;
-      }
-
-      .row-play {
-        margin-top: 30px;
-      }
-
-      .row-add .form-group {
-        margin-bottom: 15px;
-      }
-
-      .row-add .form-group select {
-        width: 100%;
-      }
-
-      .form-header {
-        font-size: 1.2em;
-      }
-
-      .footer {
-        padding-top: 10px;
-        padding-bottom: 30px;
-      }
-
-      .footer .list-inline a {
-        color: #ffffff;
-      }
-    </style>
 </head>
 
 <body>
@@ -184,6 +90,12 @@
         </div>
       </div>
 
+      <div class="row row-sandbox">
+        <div class="col-sm-7 col-sm-offset-2">
+          <canvas id="canvas" width="600" height="400"></canvas>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -196,5 +108,20 @@
       </div>
     </div>
   </footer>
+
+  <script src="./public/js/sandbox.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      console.log('I am loaded!');
+
+      var vehicles = {{ .Vehicles.List }} || [];
+      sandbox = new VehicleSandbox(vehicles);
+
+      sandbox.animate();
+      setInterval(function(){
+        sandbox.animate();
+      }, 100);
+    }
+  </script>
 </body>
 </html>
