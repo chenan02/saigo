@@ -19,17 +19,22 @@
   ```bash
   gvm install go1.4
   ```
+  3. Tell GVM which Go version to use
+
+  ```bash
+  gvm use go1.4
+  ```
 
   Read about the Go command from the Go documentation: https://golang.org/doc/articles/go_command.html
 
-  3. Set your $GOPATH accordingly. `mygo` can be whatever name you wish to choose for your workspace
+  4. Set your $GOPATH accordingly. `mygo` can be whatever name you wish to choose for your workspace
 
   ```bash
   $ mkdir $HOME/mygo
   $ export GOPATH=$HOME/mygo
   ```
 
-  4. Run your first program
+  5. Run your first program
 
   ```bash
   $ mkdir -p $GOPATH/src/github.com/user
