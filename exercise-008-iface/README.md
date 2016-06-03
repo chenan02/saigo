@@ -62,10 +62,10 @@ exercise-008-iface$ go run exhibit-a/shape.go
 
 From the looks of it, the efficiency of a shape should not really be concerned
 with the type of shape (in this case a square). The `Efficiency` function only
-need to know the _name_, _area_ and _perimeter_ of the shape in order to carry
+needs to know the _name_, _area_ and _perimeter_ of the shape in order to carry
 out its task. If a customer of this software suggests this efficiency function
 may need to handle other shapes, then we would need a way to make it flexible
-enough to accept more than just a square. This is where interfaces come in.
+enough to accept more than just a square. This is where _interfaces_ come in.
 
 ## Comprehension Tasks
 Within this exercise there are three directories containing command-line application code:
