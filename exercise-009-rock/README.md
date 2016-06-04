@@ -50,7 +50,7 @@ and explain how this game simulation works to an instructor.
 
 ## Engineering Tasks
 
-Your task is to add two three new player types to the game:
+Your task is to add three new player types to the game:
 
 1. `Obsessed` - This player selects the same move every time
 1. `Flipper`  - This player flips a coin to select one of two fixed moves
