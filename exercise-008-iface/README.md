@@ -76,6 +76,11 @@ Within this exercise there are three directories containing command-line applica
 
 Explain each exhibit to an instructor.
 
+## Question for C++/Java People!
+
+If you have experience with C++ or Java you may have noticed a huge difference in the way Go
+implements interfaces. What is it?
+
 ## Engineering Task
 
 Expand on `exhibit-c` by adding another shape or two.
