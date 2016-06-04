@@ -50,10 +50,11 @@ and explain how this game simulation works to an instructor.
 
 ## Engineering Tasks
 
-Your task is to add two knew player types to the game:
+Your task is to add two three new player types to the game:
 
 1. `Obsessed` - This player selects the same move every time
 1. `Flipper`  - This player flips a coin to select one of two fixed moves
+1. `Cyclone`  - This player cycles through the moves repeatedly
 
 The new `rock.go` should look something like this:
 
