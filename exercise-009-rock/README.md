@@ -89,7 +89,7 @@ You must:
 1. Change type `Player` to `RandoRex`
 1. Create an appropriate `Player` interface
 1. Change the signature of `Game.Add()` to accept a `Player`
-1. Create the two new player types
+1. Create the three new player types
 
 ## Bonus
 
