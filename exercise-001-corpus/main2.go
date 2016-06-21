@@ -5,28 +5,36 @@ import (
   "fmt"
   "bufio"
   "log"
-//  "sort"
+  "sort"
 )
 
-func orderHashKeys(m map[string]int) []string {
-  var keys []string
-  for k := range m {
-    keys = append(keys, k)
-  }
-  return keys
+type WordCount struct {
+  Word string
+  Count int
 }
 
-//func (this ByCount) Len() int {
-//  return 0
-//}
+type ByCount []WordCount
 
-//func (this ByCount) Less(i, j int) bool {
-//  return true
-//}
+func orderWordCounts(m map[string]int) []WordCount {
+  var wordCountSlice []WordCount 
+  for k, v := range m {
+    newWC := WordCount{k, v}
+    wordCountSlice = append(wordCountSlice, newWC)
+  }
+  return wordCountSlice
+}
 
-//func (this ByCount) Swap(i, j int) {
-//  return
-//}
+func (this ByCount) Len() int {
+  return len(this)
+}
+
+func (this ByCount) Less(i, j int) bool {
+  return this[i].Count > this[j].Count
+}
+
+func (this ByCount) Swap(i, j int) {
+  this[i], this[j] = this[j], this[i]
+}
 
 func main() {
   filename := os.Args[1]
@@ -37,16 +45,17 @@ func main() {
   }
   defer file.Close()
   
-  wordCount := make(map[string]int)
+  wordMap := make(map[string]int)
   scanner := bufio.NewScanner(file)
   scanner.Split(bufio.ScanWords) 
   for scanner.Scan() {
-    wordCount[scanner.Text()]++
+    wordMap[scanner.Text()]++
   }
 
-  keys := orderHashKeys(wordCount)
-  for _, x := range keys {
-    fmt.Println(x)
+  wordCountSlice := orderWordCounts(wordMap)
+  sort.Sort(ByCount(wordCountSlice))
+  for _, x := range wordCountSlice {
+    fmt.Println(x.Word, x.Count)
   }
   
   if err := scanner.Err(); err != nil {
