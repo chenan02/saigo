@@ -14,6 +14,7 @@ var homeT = template.Must(template.ParseFiles("exhibit-c/home.html"))
 
 func home(w http.ResponseWriter, r *http.Request) {
 	v := View{Name: "Gopher", Age: 8}
+  // passing vars to the view
 	homeT.Execute(w, &v)
 }
 

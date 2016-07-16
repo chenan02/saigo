@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <title>Name Form</title>
+  <body>
+    <form action="/addname" method="POST">
+      <input type="text" name="name" placeholder="Enter Name">
+      <input type="submit" value="Enter"/>
+    </form>
+  </body>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Count</th>
+    </tr>
+    {{ range $name, $count := . }}
+      <tr>
+        <td>{{ $name }}</td>
+        <td>{{ $count }}</td>
+      </tr>
+    {{ end }}
+  </table>
+  
+</html>

@@ -12,7 +12,9 @@ func home(w http.ResponseWriter, r *http.Request) {
 	homeT.Execute(w, nil)
 }
 
+// like controller method, called by form
 func signup(w http.ResponseWriter, r *http.Request) {
+  // parses request body & puts into r.Form
 	r.ParseForm()
 	username := r.Form.Get("username")
 	msg := "Hey " + username + ", did you try to sign-up?"
@@ -21,6 +23,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/home", home)
+  // signup msg served at /signup
 	http.HandleFunc("/signup", signup)
 	http.ListenAndServe(":8080", nil)
 }
