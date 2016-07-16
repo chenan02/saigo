@@ -3,38 +3,8 @@ package main
 import (
   "html/template"
   "net/http"
-  "os"
-  "bufio"
+  "github.com/saigo/exercise-003-web/storage"
 )
-
-func writeToFile(name string) {
-  f, err := os.OpenFile("names.txt", os.O_APPEND|os.O_WRONLY, 0600)
-  if err != nil {
-    panic(err)
-  }
-  defer f.Close()
-  if _, err := f.WriteString(name + "\n"); err != nil {
-    panic(err)
-  }
-}
-
-func readFromFile() map[string]int {
-  nc := make(map[string]int)
-  f, err := os.Open("names.txt")
-  if err != nil {
-    panic(err)
-  }
-  defer f.Close()
-  scanner := bufio.NewScanner(f)
-  scanner.Split(bufio.ScanWords)
-  for scanner.Scan() {
-    nc[scanner.Text()]++
-  }
-  if err := scanner.Err(); err != nil {
-    panic(err)
-  }
-  return nc
-}
 
 var indexT = template.Must(template.ParseFiles("index.html"))
 
@@ -45,8 +15,8 @@ func index(w http.ResponseWriter, r *http.Request) {
 func addName(w http.ResponseWriter, r *http.Request) {
   r.ParseForm()
   name := r.Form.Get("name")
-  writeToFile(name)  
-  nc := readFromFile()
+  storage.WriteToFile(name)  
+  nc := storage.ReadFromFile()
   indexT.Execute(w, &nc)
 }
 
